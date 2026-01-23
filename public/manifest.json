@@ -1,0 +1,16 @@
+{
+  "name": "AS Anlagenbau Schweizer GmbH",
+  "short_name": "AS Anlagenbau",
+  "description": "Ihr kompetenter Partner für Elektrotechnik, Energieverteilung und Smart Home in Talheim",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#00938A",
+  "icons": [
+    {
+      "src": "/favicon.ico",
+      "sizes": "any",
+      "type": "image/x-icon"
+    }
+  ]
+}
