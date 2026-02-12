@@ -122,27 +122,27 @@ export default function About() {
                 </div>
               </div>
 
-              {/* Floating Elements */}
-              <div className="absolute -top-4 -right-4 bg-white rounded-2xl shadow-xl p-4 border border-border animate-bounce-subtle">
-                <div className="flex items-center gap-3">
-                  <div className="w-12 h-12 bg-gradient-to-br from-accent to-accent/80 rounded-xl flex items-center justify-center">
-                    <CheckCircle className="w-6 h-6 text-white" />
+              {/* Floating Elements - Hidden on small screens */}
+              <div className="absolute -top-4 -right-4 bg-white rounded-2xl shadow-xl p-3 sm:p-4 border border-border animate-bounce-subtle hidden sm:block">
+                <div className="flex items-center gap-2 sm:gap-3">
+                  <div className="w-10 h-10 sm:w-12 sm:h-12 bg-gradient-to-br from-accent to-accent/80 rounded-xl flex items-center justify-center">
+                    <CheckCircle className="w-5 h-5 sm:w-6 sm:h-6 text-white" />
                   </div>
                   <div>
-                    <div className="font-semibold text-foreground">Zertifiziert</div>
-                    <div className="text-sm text-muted-foreground">Geprüfte Qualität</div>
+                    <div className="font-semibold text-foreground text-sm sm:text-base">Zertifiziert</div>
+                    <div className="text-xs sm:text-sm text-muted-foreground">Geprüfte Qualität</div>
                   </div>
                 </div>
               </div>
 
-              <div className="absolute -bottom-4 -left-4 bg-white rounded-2xl shadow-xl p-4 border border-border animate-float delay-300">
-                <div className="flex items-center gap-3">
-                  <div className="w-12 h-12 bg-gradient-to-br from-primary to-primary/80 rounded-xl flex items-center justify-center">
-                    <Wrench className="w-6 h-6 text-white" />
+              <div className="absolute -bottom-4 -left-4 bg-white rounded-2xl shadow-xl p-3 sm:p-4 border border-border animate-float delay-300 hidden sm:block">
+                <div className="flex items-center gap-2 sm:gap-3">
+                  <div className="w-10 h-10 sm:w-12 sm:h-12 bg-gradient-to-br from-primary to-primary/80 rounded-xl flex items-center justify-center">
+                    <Wrench className="w-5 h-5 sm:w-6 sm:h-6 text-white" />
                   </div>
                   <div>
-                    <div className="font-semibold text-foreground">Familienbetrieb</div>
-                    <div className="text-sm text-muted-foreground">Seit über 25 Jahren</div>
+                    <div className="font-semibold text-foreground text-sm sm:text-base">Familienbetrieb</div>
+                    <div className="text-xs sm:text-sm text-muted-foreground">Seit über 25 Jahren</div>
                   </div>
                 </div>
               </div>
@@ -190,34 +190,34 @@ export default function About() {
         </div>
 
         {/* Stats Section */}
-        <div className={`bg-gradient-to-r from-primary via-primary/95 to-accent rounded-3xl p-8 lg:p-12 relative overflow-hidden ${isVisible ? "animate-slide-up delay-400" : "opacity-0"}`}>
+        <div className={`bg-gradient-to-r from-primary via-primary/95 to-accent rounded-2xl sm:rounded-3xl p-6 sm:p-8 lg:p-12 relative overflow-hidden ${isVisible ? "animate-slide-up delay-400" : "opacity-0"}`}>
           {/* Pattern */}
           <div className="absolute inset-0 decoration-dots opacity-10" />
 
-          <div className="relative grid sm:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="relative grid grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 lg:gap-8">
             {stats.map((stat, index) => (
               <div key={index} className="text-center group">
-                <div className="inline-flex p-4 bg-white/10 rounded-2xl mb-4 group-hover:bg-white/20 transition-colors">
-                  <stat.icon className="w-7 h-7 text-white" />
+                <div className="inline-flex p-2.5 sm:p-4 bg-white/10 rounded-xl sm:rounded-2xl mb-2 sm:mb-4 group-hover:bg-white/20 transition-colors">
+                  <stat.icon className="w-5 h-5 sm:w-7 sm:h-7 text-white" />
                 </div>
-                <div className="text-4xl lg:text-5xl font-bold text-white mb-2">
+                <div className="text-2xl sm:text-3xl lg:text-4xl xl:text-5xl font-bold text-white mb-1 sm:mb-2">
                   {stat.value}
                   <span className="text-accent">{stat.suffix}</span>
                 </div>
-                <div className="text-white/95">{stat.label}</div>
+                <div className="text-white/95 text-xs sm:text-sm lg:text-base">{stat.label}</div>
               </div>
             ))}
           </div>
         </div>
 
         {/* Partners Section */}
-        <div className={`mt-20 text-center ${isVisible ? "animate-slide-up delay-500" : "opacity-0"}`}>
-          <p className="text-muted-foreground mb-8">Wir arbeiten mit führenden Herstellern zusammen</p>
-          <div className="flex flex-wrap justify-center gap-4 lg:gap-6">
+        <div className={`mt-12 sm:mt-16 lg:mt-20 text-center ${isVisible ? "animate-slide-up delay-500" : "opacity-0"}`}>
+          <p className="text-muted-foreground mb-6 sm:mb-8 text-sm sm:text-base">Wir arbeiten mit führenden Herstellern zusammen</p>
+          <div className="flex flex-wrap justify-center gap-2 sm:gap-4 lg:gap-6">
             {partners.map((partner, index) => (
               <div
                 key={index}
-                className="px-6 py-3 bg-secondary rounded-xl text-muted-foreground font-medium hover:bg-gradient-to-r hover:from-primary/10 hover:to-accent/10 hover:text-primary transition-all cursor-default border border-transparent hover:border-primary/20"
+                className="px-4 sm:px-6 py-2 sm:py-3 bg-secondary rounded-lg sm:rounded-xl text-muted-foreground font-medium text-sm sm:text-base hover:bg-gradient-to-r hover:from-primary/10 hover:to-accent/10 hover:text-primary transition-all cursor-default border border-transparent hover:border-primary/20"
               >
                 {partner}
               </div>

@@ -114,10 +114,10 @@ export default function Contact() {
           </p>
         </div>
 
-        <div className="grid lg:grid-cols-5 gap-8 lg:gap-12">
+        <div className="grid lg:grid-cols-5 gap-6 lg:gap-12">
           {/* Contact Info */}
           <div className={`lg:col-span-2 ${isVisible ? "animate-slide-in-left delay-100" : "opacity-0"}`}>
-            <div className="bg-gradient-to-br from-primary via-primary/95 to-accent rounded-3xl p-8 text-white h-full relative overflow-hidden">
+            <div className="bg-gradient-to-br from-primary via-primary/95 to-accent rounded-2xl sm:rounded-3xl p-5 sm:p-8 text-white h-full relative overflow-hidden">
               {/* Pattern */}
               <div className="absolute inset-0 decoration-dots opacity-10" />
 
@@ -165,19 +165,19 @@ export default function Contact() {
                 </div>
 
                 {/* Quick Actions */}
-                <div className="mt-10 pt-8 border-t border-white/20">
-                  <h4 className="font-semibold mb-4">Schnellkontakt</h4>
-                  <div className="flex flex-col sm:flex-row gap-3">
+                <div className="mt-8 sm:mt-10 pt-6 sm:pt-8 border-t border-white/20">
+                  <h4 className="font-semibold mb-3 sm:mb-4 text-sm sm:text-base">Schnellkontakt</h4>
+                  <div className="flex flex-col sm:flex-row gap-2 sm:gap-3">
                     <a
                       href="tel:+4971339289967"
-                      className="inline-flex items-center justify-center gap-2 px-5 py-3 bg-white text-primary rounded-xl font-semibold transition-all hover:bg-white/90 hover:-translate-y-0.5"
+                      className="inline-flex items-center justify-center gap-2 px-4 sm:px-5 py-2.5 sm:py-3 bg-white text-primary rounded-lg sm:rounded-xl font-semibold text-sm sm:text-base transition-all hover:bg-white/90 hover:-translate-y-0.5"
                     >
                       <Phone className="w-4 h-4" />
                       Anrufen
                     </a>
                     <a
                       href="mailto:info@anlagenbau-schweizer.de"
-                      className="inline-flex items-center justify-center gap-2 px-5 py-3 bg-white/10 text-white rounded-xl font-semibold transition-all hover:bg-white/20"
+                      className="inline-flex items-center justify-center gap-2 px-4 sm:px-5 py-2.5 sm:py-3 bg-white/10 text-white rounded-lg sm:rounded-xl font-semibold text-sm sm:text-base transition-all hover:bg-white/20"
                     >
                       <Mail className="w-4 h-4" />
                       E-Mail
@@ -202,9 +202,9 @@ export default function Contact() {
 
           {/* Contact Form */}
           <div className={`lg:col-span-3 ${isVisible ? "animate-slide-in-right delay-200" : "opacity-0"}`}>
-            <div className="bg-white rounded-3xl shadow-xl border border-border p-8">
-              <h3 className="text-2xl font-bold text-foreground mb-2">Anfrage senden</h3>
-              <p className="text-muted-foreground mb-8">
+            <div className="bg-white rounded-2xl sm:rounded-3xl shadow-xl border border-border p-5 sm:p-8">
+              <h3 className="text-xl sm:text-2xl font-bold text-foreground mb-2">Anfrage senden</h3>
+              <p className="text-muted-foreground mb-6 sm:mb-8 text-sm sm:text-base">
                 Füllen Sie das Formular aus und wir melden uns innerhalb von 24 Stunden.
               </p>
 
@@ -337,12 +337,12 @@ export default function Contact() {
         </div>
 
         {/* Map Section */}
-        <div className={`mt-16 ${isVisible ? "animate-slide-up delay-300" : "opacity-0"}`}>
-          <div className="bg-secondary rounded-3xl overflow-hidden border border-border">
+        <div className={`mt-10 sm:mt-16 ${isVisible ? "animate-slide-up delay-300" : "opacity-0"}`}>
+          <div className="bg-secondary rounded-2xl sm:rounded-3xl overflow-hidden border border-border">
             <div className="grid lg:grid-cols-3">
-              <div className="p-8 lg:p-12">
-                <h3 className="text-xl font-bold text-foreground mb-4">So finden Sie uns</h3>
-                <p className="text-muted-foreground mb-6">
+              <div className="p-5 sm:p-8 lg:p-12">
+                <h3 className="text-lg sm:text-xl font-bold text-foreground mb-3 sm:mb-4">So finden Sie uns</h3>
+                <p className="text-muted-foreground mb-4 sm:mb-6 text-sm sm:text-base">
                   Besuchen Sie uns in Talheim. Wir freuen uns auf Ihren Besuch!
                 </p>
                 <div className="space-y-3">

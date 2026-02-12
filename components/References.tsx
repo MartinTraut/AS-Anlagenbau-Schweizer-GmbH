@@ -92,24 +92,24 @@ export default function References() {
         </div>
 
         {/* Stats Bar */}
-        <div className={`bg-gradient-to-r from-primary via-primary/95 to-accent rounded-2xl p-6 mb-12 ${isVisible ? "animate-slide-up delay-100" : "opacity-0"}`}>
+        <div className={`bg-gradient-to-r from-primary via-primary/95 to-accent rounded-xl sm:rounded-2xl p-4 sm:p-6 mb-8 sm:mb-12 ${isVisible ? "animate-slide-up delay-100" : "opacity-0"}`}>
           <div className="grid grid-cols-3 divide-x divide-white/20">
             {stats.map((stat, index) => (
-              <div key={index} className="text-center text-white px-4">
-                <div className="text-3xl lg:text-4xl font-bold mb-1">{stat.value}</div>
-                <div className="text-white/90 text-sm lg:text-base">{stat.label}</div>
+              <div key={index} className="text-center text-white px-2 sm:px-4">
+                <div className="text-xl sm:text-2xl lg:text-4xl font-bold mb-0.5 sm:mb-1">{stat.value}</div>
+                <div className="text-white/90 text-[10px] sm:text-sm lg:text-base">{stat.label}</div>
               </div>
             ))}
           </div>
         </div>
 
         {/* Testimonials Grid */}
-        <div className="grid md:grid-cols-3 gap-6 lg:gap-8">
+        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 lg:gap-8">
           {testimonials.map((testimonial, index) => (
             <div
               key={index}
               data-index={index}
-              className={`group relative bg-secondary rounded-2xl p-6 lg:p-8 border border-border hover:border-primary/30 hover:shadow-xl hover:shadow-primary/5 transition-all duration-300 ${
+              className={`group relative bg-secondary rounded-xl sm:rounded-2xl p-5 sm:p-6 lg:p-8 border border-border hover:border-primary/30 hover:shadow-xl hover:shadow-primary/5 transition-all duration-300 ${
                 visibleCards.includes(index) ? "animate-slide-up" : "opacity-0"
               }`}
               style={{ animationDelay: `${200 + index * 100}ms` }}
@@ -157,19 +157,19 @@ export default function References() {
         </div>
 
         {/* Trust Badge */}
-        <div className={`mt-12 text-center ${isVisible ? "animate-slide-up delay-500" : "opacity-0"}`}>
-          <div className="inline-flex items-center gap-3 px-6 py-3 bg-secondary rounded-full border border-border">
+        <div className={`mt-8 sm:mt-12 text-center ${isVisible ? "animate-slide-up delay-500" : "opacity-0"}`}>
+          <div className="inline-flex flex-col sm:flex-row items-center gap-2 sm:gap-3 px-4 sm:px-6 py-3 bg-secondary rounded-2xl sm:rounded-full border border-border">
             <div className="flex -space-x-2">
               {[Building2, Home, Factory].map((Icon, i) => (
                 <div
                   key={i}
-                  className="w-8 h-8 bg-gradient-to-br from-primary to-accent rounded-full flex items-center justify-center border-2 border-white"
+                  className="w-7 h-7 sm:w-8 sm:h-8 bg-gradient-to-br from-primary to-accent rounded-full flex items-center justify-center border-2 border-white"
                 >
-                  <Icon className="w-4 h-4 text-white" />
+                  <Icon className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-white" />
                 </div>
               ))}
             </div>
-            <div className="text-sm">
+            <div className="text-xs sm:text-sm text-center sm:text-left">
               <span className="font-semibold text-foreground">500+ zufriedene Kunden</span>
               <span className="text-muted-foreground"> vertrauen uns</span>
             </div>

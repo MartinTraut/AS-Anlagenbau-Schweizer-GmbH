@@ -297,7 +297,7 @@
 
 /* Button Effects */
 .btn-primary {
-  @apply relative overflow-hidden bg-primary text-primary-foreground px-8 py-4 rounded-xl font-semibold;
+  @apply relative overflow-hidden bg-primary text-primary-foreground px-6 py-3 sm:px-8 sm:py-4 rounded-lg sm:rounded-xl font-semibold text-sm sm:text-base;
   transition: all 0.3s ease;
 }
 
@@ -318,7 +318,7 @@
 }
 
 .btn-secondary {
-  @apply relative border-2 border-primary text-primary px-8 py-4 rounded-xl font-semibold;
+  @apply relative border-2 border-primary text-primary px-6 py-3 sm:px-8 sm:py-4 rounded-lg sm:rounded-xl font-semibold text-sm sm:text-base;
   transition: all 0.3s ease;
 }
 
@@ -328,7 +328,7 @@
 }
 
 .btn-accent {
-  @apply relative overflow-hidden bg-accent text-white px-8 py-4 rounded-xl font-semibold;
+  @apply relative overflow-hidden bg-accent text-white px-6 py-3 sm:px-8 sm:py-4 rounded-lg sm:rounded-xl font-semibold text-sm sm:text-base;
   transition: all 0.3s ease;
 }
 
@@ -379,7 +379,7 @@
 
 /* Section Styling */
 .section-padding {
-  @apply py-24 lg:py-32;
+  @apply py-16 sm:py-20 md:py-24 lg:py-32;
 }
 
 /* Custom Scrollbar */
@@ -647,4 +647,44 @@
 @keyframes morph {
   0%, 100% { border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%; }
   50% { border-radius: 30% 60% 70% 40% / 50% 60% 30% 60%; }
+}
+
+/* Mobile-first responsive utilities */
+@media (max-width: 640px) {
+  .card-3d:hover {
+    transform: translateY(-4px);
+  }
+
+  .card-hover:hover {
+    transform: translateY(-4px);
+  }
+
+  /* Reduce animation intensity on mobile for better performance */
+  .animate-float {
+    animation-duration: 8s;
+  }
+
+  .animate-bounce-subtle {
+    animation: none;
+  }
+
+  /* Hide decorative elements on very small screens */
+  .decoration-dots,
+  .decoration-lines {
+    opacity: 0.5;
+  }
+}
+
+/* Ensure touch targets are large enough on mobile */
+@media (max-width: 768px) {
+  button,
+  a[href] {
+    min-height: 44px;
+  }
+}
+
+/* Prevent horizontal scroll */
+html, body {
+  overflow-x: hidden;
+  max-width: 100vw;
 }

@@ -88,27 +88,27 @@ export default function Services() {
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative" ref={sectionRef}>
         {/* Section Header */}
-        <div className="text-center max-w-3xl mx-auto mb-16">
-          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 text-primary mb-6 animate-fade-in-up">
-            <Sparkles className="w-4 h-4" />
-            <span className="text-sm font-semibold">Unsere Expertise</span>
+        <div className="text-center max-w-3xl mx-auto mb-10 sm:mb-16">
+          <div className="inline-flex items-center gap-2 px-3 sm:px-4 py-1.5 sm:py-2 rounded-full bg-primary/10 text-primary mb-4 sm:mb-6 animate-fade-in-up">
+            <Sparkles className="w-3.5 h-3.5 sm:w-4 sm:h-4" />
+            <span className="text-xs sm:text-sm font-semibold">Unsere Expertise</span>
           </div>
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-foreground mb-6">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-4 sm:mb-6">
             Unsere <span className="text-gradient">Leistungen</span>
           </h2>
-          <p className="text-lg text-muted-foreground">
+          <p className="text-base sm:text-lg text-muted-foreground px-4 sm:px-0">
             Von der Energieverteilung bis zur intelligenten Gebäudetechnik -
             wir bieten Ihnen das komplette Spektrum moderner Elektrotechnik.
           </p>
         </div>
 
         {/* Services Grid */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
+        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 lg:gap-8">
           {services.map((service, index) => (
             <div
               key={index}
               data-index={index}
-              className={`group relative bg-white rounded-2xl overflow-hidden shadow-sm border border-border card-3d ${
+              className={`group relative bg-white rounded-xl sm:rounded-2xl overflow-hidden shadow-sm border border-border card-3d ${
                 visibleCards.includes(index) ? "animate-slide-up" : "opacity-0"
               }`}
               style={{ animationDelay: `${index * 100}ms` }}
@@ -116,7 +116,7 @@ export default function Services() {
               onMouseLeave={() => setHoveredCard(null)}
             >
               {/* Image */}
-              <div className="relative h-48 overflow-hidden">
+              <div className="relative h-40 sm:h-48 overflow-hidden">
                 <Image
                   src={service.image}
                   alt={service.title}
@@ -143,19 +143,19 @@ export default function Services() {
               </div>
 
               {/* Content */}
-              <div className="p-6">
-                <h3 className="text-xl font-bold text-foreground mb-3 group-hover:text-primary transition-colors">
+              <div className="p-4 sm:p-6">
+                <h3 className="text-lg sm:text-xl font-bold text-foreground mb-2 sm:mb-3 group-hover:text-primary transition-colors">
                   {service.title}
                 </h3>
-                <p className="text-muted-foreground mb-6 leading-relaxed">
+                <p className="text-muted-foreground mb-4 sm:mb-6 leading-relaxed text-sm sm:text-base">
                   {service.description}
                 </p>
 
                 {/* Features */}
-                <ul className="space-y-2 mb-6">
+                <ul className="space-y-1.5 sm:space-y-2 mb-4 sm:mb-6">
                   {service.features.map((feature, featureIndex) => (
-                    <li key={featureIndex} className="flex items-center gap-2 text-sm text-foreground">
-                      <span className={`w-2 h-2 rounded-full bg-gradient-to-r ${service.gradient}`} />
+                    <li key={featureIndex} className="flex items-center gap-2 text-xs sm:text-sm text-foreground">
+                      <span className={`w-1.5 h-1.5 sm:w-2 sm:h-2 rounded-full bg-gradient-to-r ${service.gradient}`} />
                       {feature}
                     </li>
                   ))}
@@ -164,10 +164,10 @@ export default function Services() {
                 {/* Link */}
                 <a
                   href="#kontakt"
-                  className="inline-flex items-center gap-2 text-primary font-semibold text-sm group/link"
+                  className="inline-flex items-center gap-2 text-primary font-semibold text-xs sm:text-sm group/link"
                 >
                   Mehr erfahren
-                  <ArrowRight className="w-4 h-4 transition-transform group-hover/link:translate-x-1" />
+                  <ArrowRight className="w-3.5 h-3.5 sm:w-4 sm:h-4 transition-transform group-hover/link:translate-x-1" />
                 </a>
               </div>
             </div>
@@ -176,7 +176,7 @@ export default function Services() {
           {/* CTA Card */}
           <div
             data-index={5}
-            className={`group relative rounded-2xl overflow-hidden ${
+            className={`group relative rounded-xl sm:rounded-2xl overflow-hidden ${
               visibleCards.includes(5) ? "animate-slide-up" : "opacity-0"
             }`}
             style={{ animationDelay: "500ms" }}
@@ -190,32 +190,32 @@ export default function Services() {
             {/* Animated Gradient */}
             <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-1000" />
 
-            <div className="relative p-8 h-full flex flex-col justify-center text-white">
-              <div className="mb-4">
-                <span className="inline-block px-3 py-1 bg-white/20 rounded-full text-sm font-medium">
+            <div className="relative p-5 sm:p-8 h-full flex flex-col justify-center text-white min-h-[280px] sm:min-h-0">
+              <div className="mb-3 sm:mb-4">
+                <span className="inline-block px-2.5 sm:px-3 py-1 bg-white/20 rounded-full text-xs sm:text-sm font-medium">
                   Individuell
                 </span>
               </div>
-              <h3 className="text-2xl font-bold mb-4">
+              <h3 className="text-xl sm:text-2xl font-bold mb-3 sm:mb-4">
                 Sie haben ein spezielles Projekt?
               </h3>
-              <p className="text-white/95 mb-8 leading-relaxed">
+              <p className="text-white/95 mb-6 sm:mb-8 leading-relaxed text-sm sm:text-base">
                 Wir entwickeln individuelle Lösungen für Ihre spezifischen Anforderungen.
                 Kontaktieren Sie uns für eine unverbindliche Beratung.
               </p>
               <a
                 href="#kontakt"
-                className="inline-flex items-center gap-2 px-6 py-3 bg-white text-primary rounded-xl font-semibold transition-all hover:bg-white/90 hover:shadow-xl hover:-translate-y-1 self-start"
+                className="inline-flex items-center gap-2 px-5 sm:px-6 py-2.5 sm:py-3 bg-white text-primary rounded-lg sm:rounded-xl font-semibold text-sm sm:text-base transition-all hover:bg-white/90 hover:shadow-xl hover:-translate-y-1 self-start"
               >
                 Jetzt anfragen
-                <ArrowRight className="w-5 h-5" />
+                <ArrowRight className="w-4 h-4 sm:w-5 sm:h-5" />
               </a>
             </div>
           </div>
         </div>
 
         {/* Bottom Stats */}
-        <div className="mt-20 grid sm:grid-cols-3 gap-8 text-center">
+        <div className="mt-12 sm:mt-20 grid grid-cols-3 gap-4 sm:gap-8 text-center">
           {[
             { value: "500+", label: "Abgeschlossene Projekte" },
             { value: "25+", label: "Jahre Erfahrung" },
@@ -227,10 +227,10 @@ export default function Services() {
               className={`${visibleCards.includes(6 + index) ? "animate-fade-in-up" : "opacity-0"}`}
               style={{ animationDelay: `${600 + index * 100}ms` }}
             >
-              <div className="text-4xl lg:text-5xl font-bold text-gradient mb-2">
+              <div className="text-2xl sm:text-3xl lg:text-4xl xl:text-5xl font-bold text-gradient mb-1 sm:mb-2">
                 {stat.value}
               </div>
-              <div className="text-muted-foreground">{stat.label}</div>
+              <div className="text-muted-foreground text-xs sm:text-sm lg:text-base">{stat.label}</div>
             </div>
           ))}
         </div>

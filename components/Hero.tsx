@@ -98,20 +98,20 @@ export default function Hero() {
           {/* Left Content */}
           <div className="text-center lg:text-left">
             {/* Badge */}
-            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/10 backdrop-blur-sm border border-white/20 mb-8 animate-slide-up">
+            <div className="inline-flex items-center gap-2 px-3 sm:px-4 py-1.5 sm:py-2 rounded-full bg-white/10 backdrop-blur-sm border border-white/20 mb-6 sm:mb-8 animate-slide-up">
               <span className="w-2 h-2 bg-accent rounded-full animate-pulse" />
-              <span className="text-white/90 text-sm font-medium">
+              <span className="text-white/90 text-xs sm:text-sm font-medium">
                 Ihr Partner für Elektrotechnik seit über 25 Jahren
               </span>
             </div>
 
             {/* Heading */}
-            <h1 className="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-bold text-white leading-tight mb-6 animate-slide-up delay-100">
+            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold text-white leading-tight mb-4 sm:mb-6 animate-slide-up delay-100">
               Professioneller
-              <span className="block mt-2">
+              <span className="block mt-1 sm:mt-2">
                 <span className="relative inline-block">
                   <span className="text-white drop-shadow-lg">Anlagenbau</span>
-                  <svg className="absolute -bottom-2 left-0 w-full" viewBox="0 0 300 12" fill="none">
+                  <svg className="absolute -bottom-1 sm:-bottom-2 left-0 w-full" viewBox="0 0 300 12" fill="none">
                     <path
                       d="M2 10C50 4 150 2 298 10"
                       stroke="url(#underlineGradient)"
@@ -138,30 +138,30 @@ export default function Hero() {
             </p>
 
             {/* Features */}
-            <div className="flex flex-wrap justify-center lg:justify-start gap-4 mb-10 animate-slide-up delay-300">
+            <div className="flex flex-wrap justify-center lg:justify-start gap-2 sm:gap-4 mb-8 sm:mb-10 animate-slide-up delay-300">
               {features.map((feature, index) => (
                 <div
                   key={index}
-                  className="flex items-center gap-2 px-4 py-2 rounded-lg bg-white/10 backdrop-blur-sm border border-white/10 hover:bg-white/20 transition-colors"
+                  className="flex items-center gap-1.5 sm:gap-2 px-3 sm:px-4 py-1.5 sm:py-2 rounded-lg bg-white/10 backdrop-blur-sm border border-white/10 hover:bg-white/20 transition-colors"
                 >
-                  <feature.icon className="w-4 h-4 text-accent" />
-                  <span className="text-white/90 text-sm font-medium">{feature.text}</span>
+                  <feature.icon className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-accent" />
+                  <span className="text-white/90 text-xs sm:text-sm font-medium">{feature.text}</span>
                 </div>
               ))}
             </div>
 
             {/* CTA Buttons */}
-            <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start animate-slide-up delay-400">
+            <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center lg:justify-start animate-slide-up delay-400">
               <a
                 href="#kontakt"
-                className="group inline-flex items-center justify-center gap-2 px-8 py-4 bg-white text-primary rounded-xl font-semibold text-lg transition-all duration-300 hover:bg-white/90 hover:shadow-2xl hover:shadow-white/25 hover:-translate-y-1 ripple"
+                className="group inline-flex items-center justify-center gap-2 px-6 sm:px-8 py-3 sm:py-4 bg-white text-primary rounded-xl font-semibold text-base sm:text-lg transition-all duration-300 hover:bg-white/90 hover:shadow-2xl hover:shadow-white/25 hover:-translate-y-1 ripple"
               >
                 Projekt anfragen
-                <ArrowRight className="w-5 h-5 transition-transform duration-300 group-hover:translate-x-1" />
+                <ArrowRight className="w-4 h-4 sm:w-5 sm:h-5 transition-transform duration-300 group-hover:translate-x-1" />
               </a>
               <a
                 href="#leistungen"
-                className="inline-flex items-center justify-center gap-2 px-8 py-4 border-2 border-white/30 text-white rounded-xl font-semibold text-lg transition-all duration-300 hover:bg-white/10 hover:border-white/50 backdrop-blur-sm"
+                className="inline-flex items-center justify-center gap-2 px-6 sm:px-8 py-3 sm:py-4 border-2 border-white/30 text-white rounded-xl font-semibold text-base sm:text-lg transition-all duration-300 hover:bg-white/10 hover:border-white/50 backdrop-blur-sm"
               >
                 Unsere Leistungen
               </a>
@@ -169,9 +169,9 @@ export default function Hero() {
           </div>
 
           {/* Right Content - Stats Card */}
-          <div className="relative animate-scale-in delay-500">
+          <div className="relative animate-scale-in delay-500 mt-8 lg:mt-0">
             {/* Main Card */}
-            <div className="relative bg-white/10 backdrop-blur-md rounded-3xl p-8 border border-white/20 shadow-2xl">
+            <div className="relative bg-white/10 backdrop-blur-md rounded-2xl sm:rounded-3xl p-5 sm:p-8 border border-white/20 shadow-2xl">
               {/* Glow Effect */}
               <div className="absolute -inset-1 bg-gradient-to-br from-accent/20 to-primary/20 rounded-3xl blur-xl opacity-50" />
 
@@ -188,7 +188,7 @@ export default function Hero() {
                   </div>
                 </div>
 
-                <div className="space-y-4">
+                <div className="space-y-3 sm:space-y-4">
                   {[
                     "Fachkundige Beratung",
                     "Zuverlässige Ausführung",
@@ -198,28 +198,28 @@ export default function Hero() {
                   ].map((item, index) => (
                     <div
                       key={index}
-                      className="flex items-center gap-3 text-white group"
+                      className="flex items-center gap-2 sm:gap-3 text-white group"
                     >
-                      <div className="flex-shrink-0 w-6 h-6 rounded-full bg-white/20 flex items-center justify-center group-hover:bg-white/30 transition-colors">
-                        <CheckCircle2 className="w-4 h-4 text-white" />
+                      <div className="flex-shrink-0 w-5 h-5 sm:w-6 sm:h-6 rounded-full bg-white/20 flex items-center justify-center group-hover:bg-white/30 transition-colors">
+                        <CheckCircle2 className="w-3 h-3 sm:w-4 sm:h-4 text-white" />
                       </div>
-                      <span className="group-hover:translate-x-1 transition-transform font-medium">{item}</span>
+                      <span className="group-hover:translate-x-1 transition-transform font-medium text-sm sm:text-base">{item}</span>
                     </div>
                   ))}
                 </div>
 
                 {/* Stats */}
-                <div className="grid grid-cols-3 gap-4 mt-8 pt-8 border-t border-white/20">
+                <div className="grid grid-cols-3 gap-2 sm:gap-4 mt-6 sm:mt-8 pt-6 sm:pt-8 border-t border-white/20">
                   {[
                     { value: "25+", label: "Jahre Erfahrung" },
                     { value: "500+", label: "Projekte" },
                     { value: "100%", label: "Zufriedenheit" },
                   ].map((stat, index) => (
                     <div key={index} className="text-center group">
-                      <div className="text-2xl sm:text-3xl font-bold text-white group-hover:text-accent transition-colors">
+                      <div className="text-xl sm:text-2xl md:text-3xl font-bold text-white group-hover:text-accent transition-colors">
                         {stat.value}
                       </div>
-                      <div className="text-xs sm:text-sm text-white/90 mt-1">
+                      <div className="text-[10px] sm:text-xs md:text-sm text-white/90 mt-1">
                         {stat.label}
                       </div>
                     </div>
@@ -229,24 +229,25 @@ export default function Hero() {
             </div>
 
             {/* Floating Badge */}
-            <div className="absolute -top-4 -right-4 animate-bounce-subtle">
+            <div className="absolute -top-4 right-0 sm:-right-4 animate-bounce-subtle hidden sm:block">
               <div className="relative">
                 <div className="absolute inset-0 bg-accent rounded-full blur-md opacity-50" />
-                <div className="relative bg-gradient-to-r from-accent to-primary text-white px-5 py-2.5 rounded-full font-semibold text-sm shadow-xl flex items-center gap-2">
+                <div className="relative bg-gradient-to-r from-accent to-primary text-white px-3 sm:px-5 py-2 sm:py-2.5 rounded-full font-semibold text-xs sm:text-sm shadow-xl flex items-center gap-2">
                   <Image
                     src="/images/e-masters.png"
                     alt="e-masters"
                     width={80}
                     height={15}
-                    className="h-4 w-auto"
+                    className="h-3 sm:h-4 w-auto"
                   />
-                  e-masters zertifiziert
+                  <span className="hidden xs:inline">e-masters zertifiziert</span>
+                  <span className="xs:hidden">Zertifiziert</span>
                 </div>
               </div>
             </div>
 
             {/* Decorative Element */}
-            <div className="absolute -bottom-8 -left-8 w-32 h-32 bg-gradient-to-br from-primary/30 to-accent/30 rounded-full blur-2xl" />
+            <div className="absolute -bottom-8 -left-8 w-24 sm:w-32 h-24 sm:h-32 bg-gradient-to-br from-primary/30 to-accent/30 rounded-full blur-2xl hidden sm:block" />
           </div>
         </div>
       </div>
