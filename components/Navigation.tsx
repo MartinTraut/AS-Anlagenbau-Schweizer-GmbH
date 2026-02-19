@@ -83,9 +83,6 @@ export default function Navigation() {
                 }`}
               >
                 {link.label}
-                {activeSection === link.href.substring(1) && (
-                  <span className="absolute bottom-0 left-1/2 -translate-x-1/2 w-1 h-1 bg-current rounded-full" />
-                )}
               </a>
             ))}
           </div>
